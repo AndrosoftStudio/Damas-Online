@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Damas Brasileiras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page-bg">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <span class="material-symbols-outlined auth-icon">login</span>
+                <h2>Bem-vindo de Volta!</h2>
+                <p>Faça login para continuar no Damas Brasileiras.</p>
+            </div>
+
+            <form id="login-form" class="auth-form">
+                <div class="input-group-auth">
+                    <label for="login-email">Email</label>
+                    <input type="email" id="login-email" required autocomplete="email" placeholder="seuemail@exemplo.com">
+                </div>
+                <div class="input-group-auth">
+                    <label for="login-password">Senha</label>
+                    <input type="password" id="login-password" required autocomplete="current-password" placeholder="Sua senha">
+                </div>
+                <button type="submit" id="login-submit-button" class="btn btn-primary w-full mt-4">
+                    <span class="material-symbols-outlined">input</span> Entrar
+                </button>
+            </form>
+            <div id="login-error-message" class="error-message-auth hidden"></div>
+            <p class="auth-redirect-link">
+                Não tem uma conta? <a href="register.html">Cadastre-se aqui</a>
+            </p>
+             <p class="auth-redirect-link mt-2">
+                <a href="index.html">Voltar para o Jogo (Anônimo)</a>
+            </p>
+        </div>
+    </div>
+
+    <div id="messageBoxContainer"></div> 
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/auth-pages.js"></script> 
+</body>
+</html>

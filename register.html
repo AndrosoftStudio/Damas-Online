@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro - Damas Brasileiras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page-bg">
+    <div class="auth-container">
+        <div class="auth-card">
+            <div class="auth-header">
+                <span class="material-symbols-outlined auth-icon">person_add</span>
+                <h2>Crie sua Conta</h2>
+                <p>É rápido e fácil para jogar Damas Brasileiras!</p>
+            </div>
+
+            <form id="register-form" class="auth-form">
+                <div class="input-group-auth">
+                    <label for="register-name">Nome de Exibição</label>
+                    <input type="text" id="register-name" required placeholder="Como você quer ser chamado">
+                </div>
+                <div class="input-group-auth">
+                    <label for="register-email">Email</label>
+                    <input type="email" id="register-email" required autocomplete="email" placeholder="seuemail@exemplo.com">
+                </div>
+                <div class="input-group-auth">
+                    <label for="register-password">Senha</label>
+                    <input type="password" id="register-password" required autocomplete="new-password" placeholder="Mínimo 6 caracteres">
+                </div>
+                <div class="input-group-auth">
+                    <label for="register-confirm-password">Confirmar Senha</label>
+                    <input type="password" id="register-confirm-password" required autocomplete="new-password" placeholder="Repita sua senha">
+                </div>
+                <button type="submit" id="register-submit-button" class="btn btn-primary w-full mt-4">
+                     <span class="material-symbols-outlined">app_registration</span> Criar Conta
+                </button>
+            </form>
+            <div id="register-error-message" class="error-message-auth hidden"></div>
+            <p class="auth-redirect-link">
+                Já tem uma conta? <a href="login.html">Faça login aqui</a>
+            </p>
+            <p class="auth-redirect-link mt-2">
+                <a href="index.html">Voltar para o Jogo (Anônimo)</a>
+            </p>
+        </div>
+    </div>
+    <div id="messageBoxContainer"></div>
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/auth-pages.js"></script> 
+</body>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notificações - Damas Brasileiras</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body class="auth-page-bg">
+    <div class="page-container">
+         <header class="page-header">
+            <a href="index.html" class="back-to-game-link">
+                <span class="material-symbols-outlined">arrow_back</span> Voltar ao Jogo
+            </a>
+            <h1>Notificações</h1>
+        </header>
+        <main class="page-content">
+            <section class="notifications-section">
+                <h2>Pedidos de Amizade Pendentes</h2>
+                <div id="friendRequestsNotifications" class="notifications-list">
+                    <p class="empty-list-placeholder" id="noPendingRequestsNotificationPlaceholder">Nenhum pedido de amizade pendente.</p>
+                </div>
+            </section>
+            <!-- Futuramente: Outros tipos de notificações (convites para jogos, etc.) -->
+        </main>
+    </div>
+
+    <div id="messageBoxContainer"></div>
+    <div id="confirmationModalContainer"></div>
+
+    <script type="module" src="js/firebase-config.js"></script>
+    <script type="module" src="js/ui.js"></script>
+    <script type="module" src="js/friends-service.js"></script> 
+    <script type="module" src="js/notifications-page.js"></script>
+</body>
+</html>
